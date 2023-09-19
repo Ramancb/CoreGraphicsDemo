@@ -16,6 +16,9 @@
 		F1378318291C23B400AB4C3C /* CoreGraphicsDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1378317291C23B400AB4C3C /* CoreGraphicsDemoTests.swift */; };
 		F1378322291C23B400AB4C3C /* CoreGraphicsDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1378321291C23B400AB4C3C /* CoreGraphicsDemoUITests.swift */; };
 		F1378324291C23B400AB4C3C /* CoreGraphicsDemoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1378323291C23B400AB4C3C /* CoreGraphicsDemoUITestsLaunchTests.swift */; };
+		F1378332291C23CB00AB4C3C /* CircularProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1378331291C23CB00AB4C3C /* CircularProgressView.swift */; };
+		F1DE929F2922315D0033E2FE /* OtpStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1DE929E2922315D0033E2FE /* OtpStackView.swift */; };
+		F1DE92A1292231A40033E2FE /* OTPTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1DE92A0292231A40033E2FE /* OTPTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +52,9 @@
 		F137831D291C23B400AB4C3C /* CoreGraphicsDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoreGraphicsDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1378321291C23B400AB4C3C /* CoreGraphicsDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreGraphicsDemoUITests.swift; sourceTree = "<group>"; };
 		F1378323291C23B400AB4C3C /* CoreGraphicsDemoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreGraphicsDemoUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		F1378331291C23CB00AB4C3C /* CircularProgressView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircularProgressView.swift; sourceTree = "<group>"; };
+		F1DE929E2922315D0033E2FE /* OtpStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtpStackView.swift; sourceTree = "<group>"; };
+		F1DE92A0292231A40033E2FE /* OTPTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,9 +105,11 @@
 		F13782FF291C23B200AB4C3C /* CoreGraphicsDemo */ = {
 			isa = PBXGroup;
 			children = (
+				F1DE929D2922312F0033E2FE /* OtpStackView */,
 				F1378300291C23B200AB4C3C /* AppDelegate.swift */,
 				F1378302291C23B200AB4C3C /* SceneDelegate.swift */,
 				F1378304291C23B200AB4C3C /* ViewController.swift */,
+				F1378330291C23CB00AB4C3C /* CircularProgressBar */,
 				F1378306291C23B200AB4C3C /* Main.storyboard */,
 				F1378309291C23B400AB4C3C /* Assets.xcassets */,
 				F137830B291C23B400AB4C3C /* LaunchScreen.storyboard */,
@@ -125,6 +133,23 @@
 				F1378323291C23B400AB4C3C /* CoreGraphicsDemoUITestsLaunchTests.swift */,
 			);
 			path = CoreGraphicsDemoUITests;
+			sourceTree = "<group>";
+		};
+		F1378330291C23CB00AB4C3C /* CircularProgressBar */ = {
+			isa = PBXGroup;
+			children = (
+				F1378331291C23CB00AB4C3C /* CircularProgressView.swift */,
+			);
+			path = CircularProgressBar;
+			sourceTree = "<group>";
+		};
+		F1DE929D2922312F0033E2FE /* OtpStackView */ = {
+			isa = PBXGroup;
+			children = (
+				F1DE929E2922315D0033E2FE /* OtpStackView.swift */,
+				F1DE92A0292231A40033E2FE /* OTPTextField.swift */,
+			);
+			name = OtpStackView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -260,7 +285,10 @@
 			files = (
 				F1378305291C23B200AB4C3C /* ViewController.swift in Sources */,
 				F1378301291C23B200AB4C3C /* AppDelegate.swift in Sources */,
+				F1378332291C23CB00AB4C3C /* CircularProgressView.swift in Sources */,
+				F1DE929F2922315D0033E2FE /* OtpStackView.swift in Sources */,
 				F1378303291C23B200AB4C3C /* SceneDelegate.swift in Sources */,
+				F1DE92A1292231A40033E2FE /* OTPTextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -435,8 +463,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5448ZQBK98;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CoreGraphicsDemo/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -449,8 +479,9 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.CoreGraphicsDemo.CoreGraphicsDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.CoreGraphicsDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -462,8 +493,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5448ZQBK98;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CoreGraphicsDemo/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -476,8 +509,9 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.CoreGraphicsDemo.CoreGraphicsDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.CoreGraphicsDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
